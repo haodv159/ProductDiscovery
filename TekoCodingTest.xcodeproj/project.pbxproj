@@ -1,0 +1,883 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		7304BD960CFF0AF2E769375C /* Pods_TekoCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC99B2C9C5E2745CC964653 /* Pods_TekoCodingTestTests.framework */; };
+		834609C524162F7C00B148E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609C424162F7C00B148E3 /* AppDelegate.swift */; };
+		834609C724162F7C00B148E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609C624162F7C00B148E3 /* SceneDelegate.swift */; };
+		834609C924162F7C00B148E3 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609C824162F7C00B148E3 /* ViewController.swift */; };
+		834609CC24162F7C00B148E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834609CA24162F7C00B148E3 /* Main.storyboard */; };
+		834609CE24162F8200B148E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834609CD24162F8200B148E3 /* Assets.xcassets */; };
+		834609D124162F8200B148E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834609CF24162F8200B148E3 /* LaunchScreen.storyboard */; };
+		834609DC24162F8300B148E3 /* TekoCodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609DB24162F8300B148E3 /* TekoCodingTestTests.swift */; };
+		834609E724162F8300B148E3 /* TekoCodingTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609E624162F8300B148E3 /* TekoCodingTestUITests.swift */; };
+		834609FE2416394600B148E3 /* UIStoryboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609FD2416394600B148E3 /* UIStoryboard+.swift */; };
+		83460A002416396100B148E3 /* UIViewController+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609FF2416396100B148E3 /* UIViewController+.swift */; };
+		83460A0224163A5600B148E3 /* UIView+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0124163A5600B148E3 /* UIView+.swift */; };
+		83460A0424163AF900B148E3 /* Array+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0324163AF900B148E3 /* Array+.swift */; };
+		83460A0824163D0000B148E3 /* APIService+Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0724163D0000B148E3 /* APIService+Product.swift */; };
+		83460A0A24163DAC00B148E3 /* BaseRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0924163DAC00B148E3 /* BaseRequest.swift */; };
+		83460A0C24163DF300B148E3 /* APIConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0B24163DF300B148E3 /* APIConfigs.swift */; };
+		83460A0E2416409A00B148E3 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0D2416409A00B148E3 /* APIService.swift */; };
+		83460A102416410900B148E3 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A0F2416410900B148E3 /* APIResponse.swift */; };
+		83460A12241641BC00B148E3 /* LoadingIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83460A11241641BC00B148E3 /* LoadingIndicator.swift */; };
+		83460A14241647D600B148E3 /* Product.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 83460A13241647D600B148E3 /* Product.storyboard */; };
+		83460A1C241651BE00B148E3 /* Pods_TekoCodingTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5481F151A69E3013145102B4 /* Pods_TekoCodingTest.framework */; };
+		83460A1D241651BE00B148E3 /* Pods_TekoCodingTest.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 5481F151A69E3013145102B4 /* Pods_TekoCodingTest.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F7819C91E9C9DA0620B152BE /* Pods_TekoCodingTest_TekoCodingTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1509A771B1AE9696434DB41D /* Pods_TekoCodingTest_TekoCodingTestUITests.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		834609D824162F8300B148E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 834609B924162F7C00B148E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 834609C024162F7C00B148E3;
+			remoteInfo = TekoCodingTest;
+		};
+		834609E324162F8300B148E3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 834609B924162F7C00B148E3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 834609C024162F7C00B148E3;
+			remoteInfo = TekoCodingTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		83460A1B241651AF00B148E3 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				83460A1D241651BE00B148E3 /* Pods_TekoCodingTest.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		1509A771B1AE9696434DB41D /* Pods_TekoCodingTest_TekoCodingTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoCodingTest_TekoCodingTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		28DBDFC562657B8C2DCD9614 /* Pods-TekoCodingTest-TekoCodingTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTest-TekoCodingTestUITests.debug.xcconfig"; path = "Target Support Files/Pods-TekoCodingTest-TekoCodingTestUITests/Pods-TekoCodingTest-TekoCodingTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		3AC99B2C9C5E2745CC964653 /* Pods_TekoCodingTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoCodingTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3F7D8F8BF87643D3CEA1C3D7 /* Pods-TekoCodingTest-TekoCodingTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTest-TekoCodingTestUITests.release.xcconfig"; path = "Target Support Files/Pods-TekoCodingTest-TekoCodingTestUITests/Pods-TekoCodingTest-TekoCodingTestUITests.release.xcconfig"; sourceTree = "<group>"; };
+		44380F0314ABB118E7059B97 /* Pods-TekoCodingTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTest.release.xcconfig"; path = "Target Support Files/Pods-TekoCodingTest/Pods-TekoCodingTest.release.xcconfig"; sourceTree = "<group>"; };
+		5481F151A69E3013145102B4 /* Pods_TekoCodingTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoCodingTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5BFB886F36DB83C11F30C971 /* Pods-TekoCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-TekoCodingTestTests/Pods-TekoCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		834609C124162F7C00B148E3 /* TekoCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekoCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		834609C424162F7C00B148E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		834609C624162F7C00B148E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		834609C824162F7C00B148E3 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		834609CB24162F7C00B148E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		834609CD24162F8200B148E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		834609D024162F8200B148E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		834609D224162F8200B148E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834609D724162F8300B148E3 /* TekoCodingTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TekoCodingTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		834609DB24162F8300B148E3 /* TekoCodingTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekoCodingTestTests.swift; sourceTree = "<group>"; };
+		834609DD24162F8300B148E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834609E224162F8300B148E3 /* TekoCodingTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TekoCodingTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		834609E624162F8300B148E3 /* TekoCodingTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TekoCodingTestUITests.swift; sourceTree = "<group>"; };
+		834609E824162F8300B148E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		834609FD2416394600B148E3 /* UIStoryboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStoryboard+.swift"; sourceTree = "<group>"; };
+		834609FF2416396100B148E3 /* UIViewController+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewController+.swift"; sourceTree = "<group>"; };
+		83460A0124163A5600B148E3 /* UIView+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+.swift"; sourceTree = "<group>"; };
+		83460A0324163AF900B148E3 /* Array+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+.swift"; sourceTree = "<group>"; };
+		83460A0724163D0000B148E3 /* APIService+Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "APIService+Product.swift"; sourceTree = "<group>"; };
+		83460A0924163DAC00B148E3 /* BaseRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRequest.swift; sourceTree = "<group>"; };
+		83460A0B24163DF300B148E3 /* APIConfigs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfigs.swift; sourceTree = "<group>"; };
+		83460A0D2416409A00B148E3 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		83460A0F2416410900B148E3 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		83460A11241641BC00B148E3 /* LoadingIndicator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicator.swift; sourceTree = "<group>"; };
+		83460A13241647D600B148E3 /* Product.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Product.storyboard; sourceTree = "<group>"; };
+		83460A15241648F200B148E3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		83460A18241651AF00B148E3 /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		961B10100089D92EE45C4F39 /* Pods-TekoCodingTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTest.debug.xcconfig"; path = "Target Support Files/Pods-TekoCodingTest/Pods-TekoCodingTest.debug.xcconfig"; sourceTree = "<group>"; };
+		D8539BA454E211DBF1D5CCC1 /* Pods-TekoCodingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TekoCodingTestTests/Pods-TekoCodingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		834609BE24162F7C00B148E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				83460A1C241651BE00B148E3 /* Pods_TekoCodingTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834609D424162F8300B148E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7304BD960CFF0AF2E769375C /* Pods_TekoCodingTestTests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834609DF24162F8300B148E3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F7819C91E9C9DA0620B152BE /* Pods_TekoCodingTest_TekoCodingTestUITests.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		69F4831CE7A797E124BE616F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				961B10100089D92EE45C4F39 /* Pods-TekoCodingTest.debug.xcconfig */,
+				44380F0314ABB118E7059B97 /* Pods-TekoCodingTest.release.xcconfig */,
+				28DBDFC562657B8C2DCD9614 /* Pods-TekoCodingTest-TekoCodingTestUITests.debug.xcconfig */,
+				3F7D8F8BF87643D3CEA1C3D7 /* Pods-TekoCodingTest-TekoCodingTestUITests.release.xcconfig */,
+				D8539BA454E211DBF1D5CCC1 /* Pods-TekoCodingTestTests.debug.xcconfig */,
+				5BFB886F36DB83C11F30C971 /* Pods-TekoCodingTestTests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		834609B824162F7C00B148E3 = {
+			isa = PBXGroup;
+			children = (
+				834609C324162F7C00B148E3 /* TekoCodingTest */,
+				834609DA24162F8300B148E3 /* TekoCodingTestTests */,
+				834609E524162F8300B148E3 /* TekoCodingTestUITests */,
+				834609C224162F7C00B148E3 /* Products */,
+				69F4831CE7A797E124BE616F /* Pods */,
+				D1CEF5BF3710F4A923CD84BF /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		834609C224162F7C00B148E3 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				834609C124162F7C00B148E3 /* TekoCodingTest.app */,
+				834609D724162F8300B148E3 /* TekoCodingTestTests.xctest */,
+				834609E224162F8300B148E3 /* TekoCodingTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		834609C324162F7C00B148E3 /* TekoCodingTest */ = {
+			isa = PBXGroup;
+			children = (
+				834609F42416361300B148E3 /* Classes */,
+				834609CD24162F8200B148E3 /* Assets.xcassets */,
+				834609CF24162F8200B148E3 /* LaunchScreen.storyboard */,
+				834609D224162F8200B148E3 /* Info.plist */,
+			);
+			path = TekoCodingTest;
+			sourceTree = "<group>";
+		};
+		834609DA24162F8300B148E3 /* TekoCodingTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				834609DB24162F8300B148E3 /* TekoCodingTestTests.swift */,
+				834609DD24162F8300B148E3 /* Info.plist */,
+			);
+			path = TekoCodingTestTests;
+			sourceTree = "<group>";
+		};
+		834609E524162F8300B148E3 /* TekoCodingTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				834609E624162F8300B148E3 /* TekoCodingTestUITests.swift */,
+				834609E824162F8300B148E3 /* Info.plist */,
+			);
+			path = TekoCodingTestUITests;
+			sourceTree = "<group>";
+		};
+		834609F42416361300B148E3 /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				834609FB2416376400B148E3 /* Storyboards */,
+				834609FA2416365B00B148E3 /* ViewModels */,
+				834609F92416364900B148E3 /* AppDelegate */,
+				834609F82416364000B148E3 /* ViewControllers */,
+				834609F72416363500B148E3 /* Helpers */,
+				834609F62416362C00B148E3 /* Services */,
+				834609F52416362100B148E3 /* Models */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		834609F52416362100B148E3 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		834609F62416362C00B148E3 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				83460A0724163D0000B148E3 /* APIService+Product.swift */,
+				83460A0924163DAC00B148E3 /* BaseRequest.swift */,
+				83460A0B24163DF300B148E3 /* APIConfigs.swift */,
+				83460A0D2416409A00B148E3 /* APIService.swift */,
+				83460A0F2416410900B148E3 /* APIResponse.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		834609F72416363500B148E3 /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				834609FC2416391000B148E3 /* Extensions */,
+				83460A11241641BC00B148E3 /* LoadingIndicator.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		834609F82416364000B148E3 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				834609C824162F7C00B148E3 /* ViewController.swift */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		834609F92416364900B148E3 /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				834609C424162F7C00B148E3 /* AppDelegate.swift */,
+				834609C624162F7C00B148E3 /* SceneDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		834609FA2416365B00B148E3 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		834609FB2416376400B148E3 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				834609CA24162F7C00B148E3 /* Main.storyboard */,
+				83460A13241647D600B148E3 /* Product.storyboard */,
+			);
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		834609FC2416391000B148E3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				834609FD2416394600B148E3 /* UIStoryboard+.swift */,
+				834609FF2416396100B148E3 /* UIViewController+.swift */,
+				83460A0124163A5600B148E3 /* UIView+.swift */,
+				83460A0324163AF900B148E3 /* Array+.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		D1CEF5BF3710F4A923CD84BF /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				83460A18241651AF00B148E3 /* Alamofire.framework */,
+				83460A15241648F200B148E3 /* Alamofire.framework */,
+				5481F151A69E3013145102B4 /* Pods_TekoCodingTest.framework */,
+				1509A771B1AE9696434DB41D /* Pods_TekoCodingTest_TekoCodingTestUITests.framework */,
+				3AC99B2C9C5E2745CC964653 /* Pods_TekoCodingTestTests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		834609C024162F7C00B148E3 /* TekoCodingTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834609EB24162F8300B148E3 /* Build configuration list for PBXNativeTarget "TekoCodingTest" */;
+			buildPhases = (
+				F5E65FB6CAF2D04DBFD5504A /* [CP] Check Pods Manifest.lock */,
+				834609BD24162F7C00B148E3 /* Sources */,
+				834609BE24162F7C00B148E3 /* Frameworks */,
+				834609BF24162F7C00B148E3 /* Resources */,
+				8BD5A7BD9207AC8011E36368 /* [CP] Embed Pods Frameworks */,
+				83460A1B241651AF00B148E3 /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = TekoCodingTest;
+			productName = TekoCodingTest;
+			productReference = 834609C124162F7C00B148E3 /* TekoCodingTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		834609D624162F8300B148E3 /* TekoCodingTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834609EE24162F8300B148E3 /* Build configuration list for PBXNativeTarget "TekoCodingTestTests" */;
+			buildPhases = (
+				0F1C7BCB9DD4CF8F681EB19C /* [CP] Check Pods Manifest.lock */,
+				834609D324162F8300B148E3 /* Sources */,
+				834609D424162F8300B148E3 /* Frameworks */,
+				834609D524162F8300B148E3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				834609D924162F8300B148E3 /* PBXTargetDependency */,
+			);
+			name = TekoCodingTestTests;
+			productName = TekoCodingTestTests;
+			productReference = 834609D724162F8300B148E3 /* TekoCodingTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		834609E124162F8300B148E3 /* TekoCodingTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 834609F124162F8300B148E3 /* Build configuration list for PBXNativeTarget "TekoCodingTestUITests" */;
+			buildPhases = (
+				330B546F633E4C0C91A620E5 /* [CP] Check Pods Manifest.lock */,
+				834609DE24162F8300B148E3 /* Sources */,
+				834609DF24162F8300B148E3 /* Frameworks */,
+				834609E024162F8300B148E3 /* Resources */,
+				2AC42FAA86C4A19954573F83 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				834609E424162F8300B148E3 /* PBXTargetDependency */,
+			);
+			name = TekoCodingTestUITests;
+			productName = TekoCodingTestUITests;
+			productReference = 834609E224162F8300B148E3 /* TekoCodingTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		834609B924162F7C00B148E3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = "Hao Dam";
+				TargetAttributes = {
+					834609C024162F7C00B148E3 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					834609D624162F8300B148E3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 834609C024162F7C00B148E3;
+					};
+					834609E124162F8300B148E3 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = 834609C024162F7C00B148E3;
+					};
+				};
+			};
+			buildConfigurationList = 834609BC24162F7C00B148E3 /* Build configuration list for PBXProject "TekoCodingTest" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 834609B824162F7C00B148E3;
+			productRefGroup = 834609C224162F7C00B148E3 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				834609C024162F7C00B148E3 /* TekoCodingTest */,
+				834609D624162F8300B148E3 /* TekoCodingTestTests */,
+				834609E124162F8300B148E3 /* TekoCodingTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		834609BF24162F7C00B148E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834609D124162F8200B148E3 /* LaunchScreen.storyboard in Resources */,
+				834609CE24162F8200B148E3 /* Assets.xcassets in Resources */,
+				83460A14241647D600B148E3 /* Product.storyboard in Resources */,
+				834609CC24162F7C00B148E3 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834609D524162F8300B148E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834609E024162F8300B148E3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0F1C7BCB9DD4CF8F681EB19C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekoCodingTestTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		2AC42FAA86C4A19954573F83 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoCodingTest-TekoCodingTestUITests/Pods-TekoCodingTest-TekoCodingTestUITests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoCodingTest-TekoCodingTestUITests/Pods-TekoCodingTest-TekoCodingTestUITests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoCodingTest-TekoCodingTestUITests/Pods-TekoCodingTest-TekoCodingTestUITests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		330B546F633E4C0C91A620E5 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekoCodingTest-TekoCodingTestUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8BD5A7BD9207AC8011E36368 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoCodingTest/Pods-TekoCodingTest-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-TekoCodingTest/Pods-TekoCodingTest-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-TekoCodingTest/Pods-TekoCodingTest-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F5E65FB6CAF2D04DBFD5504A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-TekoCodingTest-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		834609BD24162F7C00B148E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834609FE2416394600B148E3 /* UIStoryboard+.swift in Sources */,
+				83460A0824163D0000B148E3 /* APIService+Product.swift in Sources */,
+				834609C924162F7C00B148E3 /* ViewController.swift in Sources */,
+				83460A002416396100B148E3 /* UIViewController+.swift in Sources */,
+				83460A0E2416409A00B148E3 /* APIService.swift in Sources */,
+				83460A12241641BC00B148E3 /* LoadingIndicator.swift in Sources */,
+				83460A102416410900B148E3 /* APIResponse.swift in Sources */,
+				834609C524162F7C00B148E3 /* AppDelegate.swift in Sources */,
+				83460A0224163A5600B148E3 /* UIView+.swift in Sources */,
+				834609C724162F7C00B148E3 /* SceneDelegate.swift in Sources */,
+				83460A0424163AF900B148E3 /* Array+.swift in Sources */,
+				83460A0C24163DF300B148E3 /* APIConfigs.swift in Sources */,
+				83460A0A24163DAC00B148E3 /* BaseRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834609D324162F8300B148E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834609DC24162F8300B148E3 /* TekoCodingTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		834609DE24162F8300B148E3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				834609E724162F8300B148E3 /* TekoCodingTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		834609D924162F8300B148E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 834609C024162F7C00B148E3 /* TekoCodingTest */;
+			targetProxy = 834609D824162F8300B148E3 /* PBXContainerItemProxy */;
+		};
+		834609E424162F8300B148E3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 834609C024162F7C00B148E3 /* TekoCodingTest */;
+			targetProxy = 834609E324162F8300B148E3 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		834609CA24162F7C00B148E3 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834609CB24162F7C00B148E3 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		834609CF24162F8200B148E3 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				834609D024162F8200B148E3 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		834609E924162F8300B148E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		834609EA24162F8300B148E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		834609EC24162F8300B148E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 961B10100089D92EE45C4F39 /* Pods-TekoCodingTest.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU4R7JCPBW;
+				INFOPLIST_FILE = TekoCodingTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.new.base;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		834609ED24162F8300B148E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 44380F0314ABB118E7059B97 /* Pods-TekoCodingTest.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MU4R7JCPBW;
+				INFOPLIST_FILE = TekoCodingTest/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.new.base;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		834609EF24162F8300B148E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D8539BA454E211DBF1D5CCC1 /* Pods-TekoCodingTestTests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TekoCodingTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.haodv.TekoCodingTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TekoCodingTest.app/TekoCodingTest";
+			};
+			name = Debug;
+		};
+		834609F024162F8300B148E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5BFB886F36DB83C11F30C971 /* Pods-TekoCodingTestTests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TekoCodingTestTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.haodv.TekoCodingTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/TekoCodingTest.app/TekoCodingTest";
+			};
+			name = Release;
+		};
+		834609F224162F8300B148E3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 28DBDFC562657B8C2DCD9614 /* Pods-TekoCodingTest-TekoCodingTestUITests.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TekoCodingTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.haodv.TekoCodingTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TekoCodingTest;
+			};
+			name = Debug;
+		};
+		834609F324162F8300B148E3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3F7D8F8BF87643D3CEA1C3D7 /* Pods-TekoCodingTest-TekoCodingTestUITests.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = TekoCodingTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.haodv.TekoCodingTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = TekoCodingTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		834609BC24162F7C00B148E3 /* Build configuration list for PBXProject "TekoCodingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834609E924162F8300B148E3 /* Debug */,
+				834609EA24162F8300B148E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834609EB24162F8300B148E3 /* Build configuration list for PBXNativeTarget "TekoCodingTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834609EC24162F8300B148E3 /* Debug */,
+				834609ED24162F8300B148E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834609EE24162F8300B148E3 /* Build configuration list for PBXNativeTarget "TekoCodingTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834609EF24162F8300B148E3 /* Debug */,
+				834609F024162F8300B148E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		834609F124162F8300B148E3 /* Build configuration list for PBXNativeTarget "TekoCodingTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				834609F224162F8300B148E3 /* Debug */,
+				834609F324162F8300B148E3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 834609B924162F7C00B148E3 /* Project object */;
+}
