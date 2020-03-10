@@ -63,7 +63,7 @@ class ProductRouter: BaseRequest {
 
 extension APIService {
     
-    static func list(_ param: [String: Any]) -> Observable<APIResponse> {
+    static func getList(_ param: [String: Any]) -> Observable<APIResponse> {
         return request(ProductRouter(endPoint: .list(param)))
     }
 }

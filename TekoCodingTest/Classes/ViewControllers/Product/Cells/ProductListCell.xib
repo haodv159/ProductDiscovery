@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="SF-Pro-Text-Medium.otf">
+            <string>SFProText-Medium</string>
+        </array>
+        <array key="SF-Pro-Text-Regular.otf">
+            <string>SFProText-Regular</string>
+        </array>
+        <array key="SF-Pro-Text-Semibold.otf">
+            <string>SFProText-Semibold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ProductListCell" id="jHG-ok-sYa" customClass="ProductListCell" customModule="TekoCodingTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="459" height="116"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="l0Z-Xf-Wrf">
+                <rect key="frame" x="0.0" y="0.0" width="459" height="116"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="avatar-default" translatesAutoresizingMaskIntoConstraints="NO" id="Dlh-cT-VUm">
+                        <rect key="frame" x="12" y="18" width="80" height="80"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="80" id="sVr-7F-0tV"/>
+                            <constraint firstAttribute="width" secondItem="Dlh-cT-VUm" secondAttribute="height" id="y12-cS-svp"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Thẻ nhớ SDHC Sandisk 16GB Extre me Pro (class 10) Ultra" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miz-Lo-YtC">
+                        <rect key="frame" x="104" y="12" width="343" height="33.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="14"/>
+                        <color key="textColor" red="0.14901960780000001" green="0.15686274510000001" blue="0.16078431369999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="8.789.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HNu-4E-q70">
+                        <rect key="frame" x="104" y="49.5" width="61.5" height="14.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="0.91764705879999997" green="0.20392156859999999" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md0-tX-TzP">
+                        <rect key="frame" x="165.5" y="47.5" width="20" height="14.5"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="20" id="LWt-tk-K3h"/>
+                            <constraint firstAttribute="height" constant="14.5" id="pR0-9L-umm"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="SFProText-Semibold" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="0.91764705879999997" green="0.20392156859999999" blue="0.1215686275" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="10.970.000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eGG-on-tGx">
+                        <rect key="frame" x="104" y="68" width="63" height="14.5"/>
+                        <fontDescription key="fontDescription" name="SFProText-Regular" family="SF Pro Text" pointSize="12"/>
+                        <color key="textColor" red="0.5607843137254902" green="0.58431372549019611" blue="0.59607843137254901" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9ba-pQ-vI4">
+                        <rect key="frame" x="171" y="68" width="32" height="15"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bgd-discount" translatesAutoresizingMaskIntoConstraints="NO" id="74i-nu-v59">
+                                <rect key="frame" x="0.0" y="0.0" width="32" height="15"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="-20%" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cjM-Q5-Fip">
+                                <rect key="frame" x="3.5" y="1.5" width="25.5" height="12"/>
+                                <fontDescription key="fontDescription" name="SFProText-Medium" family="SF Pro Text" pointSize="10"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="74i-nu-v59" secondAttribute="trailing" id="69P-b4-43U"/>
+                            <constraint firstAttribute="width" constant="32" id="UGP-lG-NwX"/>
+                            <constraint firstItem="cjM-Q5-Fip" firstAttribute="centerX" secondItem="9ba-pQ-vI4" secondAttribute="centerX" id="WRi-cz-BtB"/>
+                            <constraint firstItem="cjM-Q5-Fip" firstAttribute="centerY" secondItem="9ba-pQ-vI4" secondAttribute="centerY" id="XIq-9g-meF"/>
+                            <constraint firstAttribute="bottom" secondItem="74i-nu-v59" secondAttribute="bottom" id="cQG-to-7pu"/>
+                            <constraint firstItem="74i-nu-v59" firstAttribute="leading" secondItem="9ba-pQ-vI4" secondAttribute="leading" id="hOk-QC-EHt"/>
+                            <constraint firstItem="74i-nu-v59" firstAttribute="top" secondItem="9ba-pQ-vI4" secondAttribute="top" id="mm0-ts-RyU"/>
+                            <constraint firstAttribute="height" constant="15" id="zVi-P3-nyD"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="9ba-pQ-vI4" firstAttribute="leading" secondItem="eGG-on-tGx" secondAttribute="trailing" constant="4" id="2Hy-nm-oad"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="9ba-pQ-vI4" secondAttribute="trailing" constant="12" id="815-8C-qvR"/>
+                    <constraint firstItem="miz-Lo-YtC" firstAttribute="top" secondItem="l0Z-Xf-Wrf" secondAttribute="top" constant="12" id="CO9-kL-wIF"/>
+                    <constraint firstItem="eGG-on-tGx" firstAttribute="top" secondItem="HNu-4E-q70" secondAttribute="bottom" constant="4" id="KRE-LA-2XO"/>
+                    <constraint firstItem="miz-Lo-YtC" firstAttribute="leading" secondItem="Dlh-cT-VUm" secondAttribute="trailing" constant="12" id="OlS-aN-HDV"/>
+                    <constraint firstItem="Dlh-cT-VUm" firstAttribute="centerY" secondItem="l0Z-Xf-Wrf" secondAttribute="centerY" id="Uc3-ln-dCd"/>
+                    <constraint firstItem="HNu-4E-q70" firstAttribute="leading" secondItem="miz-Lo-YtC" secondAttribute="leading" id="YnH-jQ-0aK"/>
+                    <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Md0-tX-TzP" secondAttribute="trailing" constant="12" id="el0-0t-jS8"/>
+                    <constraint firstItem="eGG-on-tGx" firstAttribute="leading" secondItem="miz-Lo-YtC" secondAttribute="leading" id="g45-RP-v81"/>
+                    <constraint firstItem="Dlh-cT-VUm" firstAttribute="leading" secondItem="l0Z-Xf-Wrf" secondAttribute="leading" constant="12" id="guv-71-s1M"/>
+                    <constraint firstItem="HNu-4E-q70" firstAttribute="top" secondItem="miz-Lo-YtC" secondAttribute="bottom" constant="4" id="n4V-8h-wS7"/>
+                    <constraint firstAttribute="trailing" secondItem="miz-Lo-YtC" secondAttribute="trailing" constant="12" id="oOi-16-OSH"/>
+                    <constraint firstItem="Md0-tX-TzP" firstAttribute="top" secondItem="HNu-4E-q70" secondAttribute="top" constant="-2" id="yvY-2T-Zdr"/>
+                    <constraint firstItem="Md0-tX-TzP" firstAttribute="leading" secondItem="HNu-4E-q70" secondAttribute="trailing" id="zZd-vz-UbO"/>
+                    <constraint firstItem="9ba-pQ-vI4" firstAttribute="centerY" secondItem="eGG-on-tGx" secondAttribute="centerY" id="zet-bP-fXb"/>
+                </constraints>
+            </collectionViewCellContentView>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <size key="customSize" width="459" height="116"/>
+            <connections>
+                <outlet property="avatarImageView" destination="Dlh-cT-VUm" id="sJQ-gQ-gfr"/>
+                <outlet property="currentPriceLabel" destination="HNu-4E-q70" id="AzH-pC-d9W"/>
+                <outlet property="discountLabel" destination="cjM-Q5-Fip" id="3je-Th-Oov"/>
+                <outlet property="nameLabel" destination="miz-Lo-YtC" id="tIE-N5-egt"/>
+                <outlet property="oldPriceLabel" destination="eGG-on-tGx" id="dpQ-r7-Hgt"/>
+            </connections>
+            <point key="canvasLocation" x="134.05797101449275" y="125.89285714285714"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="avatar-default" width="80" height="80"/>
+        <image name="bgd-discount" width="32" height="15"/>
+    </resources>
+</document>

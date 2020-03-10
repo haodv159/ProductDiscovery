@@ -11,6 +11,8 @@ target 'TekoCodingTest' do
   pod 'RxSwift',    '~> 4.3'
   pod 'RxCocoa',    '~> 4.3'
   pod 'MBProgressHUD', '~> 1.1.0'
+  pod 'SwiftyUserDefaults', '4.0.0-alpha.1'
+  pod 'IQKeyboardManagerSwift'
 
   # Pods for TekoCodingTest
 
