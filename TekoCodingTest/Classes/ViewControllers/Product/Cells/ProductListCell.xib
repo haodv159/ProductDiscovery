@@ -48,7 +48,7 @@
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="đ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Md0-tX-TzP">
-                        <rect key="frame" x="165.5" y="47.5" width="20" height="14.5"/>
+                        <rect key="frame" x="167.5" y="47.5" width="20" height="14.5"/>
                         <constraints>
                             <constraint firstAttribute="width" constant="20" id="LWt-tk-K3h"/>
                             <constraint firstAttribute="height" constant="14.5" id="pR0-9L-umm"/>
@@ -103,7 +103,7 @@
                     <constraint firstItem="HNu-4E-q70" firstAttribute="top" secondItem="miz-Lo-YtC" secondAttribute="bottom" constant="4" id="n4V-8h-wS7"/>
                     <constraint firstAttribute="trailing" secondItem="miz-Lo-YtC" secondAttribute="trailing" constant="12" id="oOi-16-OSH"/>
                     <constraint firstItem="Md0-tX-TzP" firstAttribute="top" secondItem="HNu-4E-q70" secondAttribute="top" constant="-2" id="yvY-2T-Zdr"/>
-                    <constraint firstItem="Md0-tX-TzP" firstAttribute="leading" secondItem="HNu-4E-q70" secondAttribute="trailing" id="zZd-vz-UbO"/>
+                    <constraint firstItem="Md0-tX-TzP" firstAttribute="leading" secondItem="HNu-4E-q70" secondAttribute="trailing" constant="2" id="zZd-vz-UbO"/>
                     <constraint firstItem="9ba-pQ-vI4" firstAttribute="centerY" secondItem="eGG-on-tGx" secondAttribute="centerY" id="zet-bP-fXb"/>
                 </constraints>
             </collectionViewCellContentView>
@@ -112,6 +112,7 @@
             <connections>
                 <outlet property="avatarImageView" destination="Dlh-cT-VUm" id="sJQ-gQ-gfr"/>
                 <outlet property="currentPriceLabel" destination="HNu-4E-q70" id="AzH-pC-d9W"/>
+                <outlet property="discountImageView" destination="74i-nu-v59" id="CUj-qW-prM"/>
                 <outlet property="discountLabel" destination="cjM-Q5-Fip" id="3je-Th-Oov"/>
                 <outlet property="nameLabel" destination="miz-Lo-YtC" id="tIE-N5-egt"/>
                 <outlet property="oldPriceLabel" destination="eGG-on-tGx" id="dpQ-r7-Hgt"/>

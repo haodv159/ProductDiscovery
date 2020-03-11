@@ -40,6 +40,8 @@ class ProductListViewController: BaseViewController {
         searchBar.leftViewMode = .always
         searchBar.clearButtonMode = .whileEditing
         
+        searchBar.delegate = self
+        
         addToolBar(textField: searchBar)
     }
     
@@ -47,7 +49,6 @@ class ProductListViewController: BaseViewController {
         let layout = UICollectionViewFlowLayout()
         layout.minimumLineSpacing = CGFloat(4)
         layout.scrollDirection = .vertical
-        layout.estimatedItemSize = UICollectionViewFlowLayout.automaticSize
         collectionView.collectionViewLayout = layout
         collectionView.contentInsetAdjustmentBehavior = .never
         collectionView.isScrollEnabled = true
@@ -58,13 +59,8 @@ class ProductListViewController: BaseViewController {
     private func bindViewModel() {
         collectionView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        var foodItems = [Int]()
-        for index in 0 ..< 10 {
-            foodItems.append(index)
-        }
-        
-        Observable.just(foodItems).bind(to: collectionView.rx.items(cellIdentifier: ProductListCell.identifier, cellType: ProductListCell.self)) { _, index, cell in
-            cell.bindData("")
+        viewModel.products.bind(to: collectionView.rx.items(cellIdentifier: ProductListCell.identifier, cellType: ProductListCell.self)) { _, data, cell in
+            cell.bindData(data)
         }.disposed(by: disposeBag)
         
         collectionView.rx.itemSelected.bind { indexPath in
@@ -77,5 +73,30 @@ extension ProductListViewController: UICollectionViewDelegateFlowLayout {
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         return CGSize(width: self.collectionView.bounds.width, height: ProductListCell.heightCell)
+    }
+}
+
+extension ProductListViewController: UITextFieldDelegate {
+
+    func addToolBar(textField: UITextField) {
+        let toolBar = UIToolbar()
+        toolBar.barStyle = .default
+        toolBar.isTranslucent = true
+        let doneButton = UIBarButtonItem(title: "Xong", style: UIBarButtonItem.Style.done, target: self, action: #selector(donePressed))
+        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
+        toolBar.setItems([spaceButton, doneButton], animated: false)
+        toolBar.isUserInteractionEnabled = true
+        toolBar.sizeToFit()
+
+        textField.delegate = self
+        textField.inputAccessoryView = toolBar
+    }
+    
+    @objc func donePressed(){
+        view.endEditing(true)
+    }
+    
+    func textFieldDidChangeSelection(_ textField: UITextField) {
+        viewModel.getProductList(textField.text ?? "")
     }
 }

@@ -7,10 +7,14 @@
 //
 
 import Foundation
+import RxSwift
+import RxCocoa
+import SwiftyJSON
 
 class ProductListViewModel: BaseViewModel {
     
     var page = 1
+    var products = BehaviorRelay<[Product]>(value: [Product]())
     
     override init() {
         super.init()
@@ -26,6 +30,14 @@ class ProductListViewModel: BaseViewModel {
         APIService.getList(params).subscribe(onNext: { [weak self] response in
             guard let weakSelf = self else { return }
             print("TestTest: \(response)")
+            if response.isSuccess {
+                weakSelf.handleSuccess(response.data)
+            }
         }).disposed(by: disposeBag)
+    }
+    
+    private func handleSuccess(_ response: [[String: Any]]) {
+        let listProduct = response.map({ Product(JSON($0)) })//.filter({ $0.status?.isPublish == true })
+        products.accept(listProduct)
     }
 }

@@ -10,8 +10,7 @@ import UIKit
 
 struct Address {
     
-    static let domain = "listing.stage.tekoapis.net"
-    static let baseUrl = "https://\(domain)/"
+    static let baseUrl = "https://listing.stage.tekoapis.net/"
     
     struct Product {
         static let list     = "api/search"

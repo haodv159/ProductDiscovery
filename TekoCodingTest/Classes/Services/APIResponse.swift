@@ -30,9 +30,9 @@ enum APIStatus: Int {
 
 struct APIResponse {
     
-    var status: Bool = false
+    var isSuccess: Bool = false
     var message: String = ""
-    var data = [String: Any]()
+    var data = [[String: Any]]()
     var extra = [String: Any]()
     
     static var errorAlertResponse = PublishSubject<Bool>()
@@ -45,10 +45,11 @@ struct APIResponse {
             }
             
             if let code = value["code"] as? String {
-                self.status = code == "SUCCESS"
+                self.isSuccess = code == "SUCCESS"
             }
             
-            if let data = value["result"] as? [String: Any] {
+            if let dict = value["result"] as? [String: Any],
+                let data = dict["products"] as? [[String: Any]] {
                 self.data = data
             }
             

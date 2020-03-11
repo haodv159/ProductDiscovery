@@ -18,7 +18,7 @@ struct APIService {
 
     static func requestHTTPS(_ urlRequest: BaseRequest) -> Observable<APIResponse> {
         return Observable.create({ observer in
-            _ = SessionManager.rx.request(urlRequest: urlRequest).responseJSON().subscribe(onNext: { response in
+            _ = Alamofire.SessionManager.default.rx.request(urlRequest: urlRequest).responseJSON().subscribe(onNext: { response in
                 observer.onNext(APIResponse(response))
                 observer.onCompleted()
             }, onError: { error in
@@ -29,16 +29,4 @@ struct APIService {
             return Disposables.create()
         })
     }
-    
-    static let SessionManager: Alamofire.SessionManager = {
-        let serverTrustPolicies: [String: ServerTrustPolicy] = [Address.domain: .disableEvaluation]
-        let configuration = URLSessionConfiguration.default
-        configuration.httpAdditionalHeaders = Alamofire.SessionManager.defaultHTTPHeaders
-        let man = Alamofire.SessionManager(
-            configuration: configuration,
-            serverTrustPolicyManager: ServerTrustPolicyManager(policies: serverTrustPolicies)
-        )
-        
-        return man
-    }()
 }

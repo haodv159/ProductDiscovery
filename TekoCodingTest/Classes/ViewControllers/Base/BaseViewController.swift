@@ -36,24 +36,3 @@ class BaseViewController: UIViewController {
     */
 
 }
-
-extension BaseViewController: UITextFieldDelegate {
-
-    func addToolBar(textField: UITextField) {
-        let toolBar = UIToolbar()
-        toolBar.barStyle = .default
-        toolBar.isTranslucent = true
-        let doneButton = UIBarButtonItem(title: "Xong", style: UIBarButtonItem.Style.done, target: self, action: #selector(donePressed))
-        let spaceButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonItem.SystemItem.flexibleSpace, target: nil, action: nil)
-        toolBar.setItems([spaceButton, doneButton], animated: false)
-        toolBar.isUserInteractionEnabled = true
-        toolBar.sizeToFit()
-
-        textField.delegate = self
-        textField.inputAccessoryView = toolBar
-    }
-    
-    @objc func donePressed(){
-        view.endEditing(true)
-    }
-}
