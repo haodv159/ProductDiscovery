@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		7304BD960CFF0AF2E769375C /* Pods_TekoCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC99B2C9C5E2745CC964653 /* Pods_TekoCodingTestTests.framework */; };
 		834609C524162F7C00B148E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609C424162F7C00B148E3 /* AppDelegate.swift */; };
-		834609C724162F7C00B148E3 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609C624162F7C00B148E3 /* SceneDelegate.swift */; };
 		834609CE24162F8200B148E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834609CD24162F8200B148E3 /* Assets.xcassets */; };
 		834609D124162F8200B148E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834609CF24162F8200B148E3 /* LaunchScreen.storyboard */; };
 		834609DC24162F8300B148E3 /* TekoCodingTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609DB24162F8300B148E3 /* TekoCodingTestTests.swift */; };
@@ -89,7 +88,6 @@
 		5BFB886F36DB83C11F30C971 /* Pods-TekoCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-TekoCodingTestTests/Pods-TekoCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
 		834609C124162F7C00B148E3 /* TekoCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekoCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834609C424162F7C00B148E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		834609C624162F7C00B148E3 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		834609CD24162F8200B148E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		834609D024162F8200B148E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		834609D224162F8200B148E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -282,7 +280,6 @@
 			isa = PBXGroup;
 			children = (
 				834609C424162F7C00B148E3 /* AppDelegate.swift */,
-				834609C624162F7C00B148E3 /* SceneDelegate.swift */,
 			);
 			path = AppDelegate;
 			sourceTree = "<group>";
@@ -660,7 +657,6 @@
 				83460A102416410900B148E3 /* APIResponse.swift in Sources */,
 				834609C524162F7C00B148E3 /* AppDelegate.swift in Sources */,
 				83460A0224163A5600B148E3 /* UIView+.swift in Sources */,
-				834609C724162F7C00B148E3 /* SceneDelegate.swift in Sources */,
 				83679FF4241737CC00B24EA9 /* BaseViewModel.swift in Sources */,
 				83460A0424163AF900B148E3 /* Array+.swift in Sources */,
 				83460A0C24163DF300B148E3 /* APIConfigs.swift in Sources */,
