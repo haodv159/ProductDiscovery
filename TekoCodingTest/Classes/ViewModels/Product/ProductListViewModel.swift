@@ -29,15 +29,16 @@ class ProductListViewModel: BaseViewModel {
             "_limit": 20] as [String: Any]
         APIService.getList(params).subscribe(onNext: { [weak self] response in
             guard let weakSelf = self else { return }
-            print("TestTest: \(response)")
             if response.isSuccess {
-                weakSelf.handleSuccess(response.data)
+                weakSelf.handleSuccess(response.result)
             }
         }).disposed(by: disposeBag)
     }
     
-    private func handleSuccess(_ response: [[String: Any]]) {
-        let listProduct = response.map({ Product(JSON($0)) })//.filter({ $0.status?.isPublish == true })
-        products.accept(listProduct)
+    private func handleSuccess(_ response: [String: Any]) {
+        if let data = response["products"] as? [[String: Any]] {
+            let listProduct = data.map({ Product(JSON($0)) })//.filter({ $0.status?.isPublish == true })
+            products.accept(listProduct)
+        }
     }
 }

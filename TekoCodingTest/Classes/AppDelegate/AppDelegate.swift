@@ -15,8 +15,21 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        showScreen()
         return true
     }
 
 }
 
+// MARK: - Navigations
+
+extension AppDelegate {
+    
+    func showScreen() {
+        let productListVC = UIViewController().instantiateViewController(fromStoryboard: .product, ofType: ProductListViewController.self)
+        let navProductVC = UINavigationController(rootViewController: productListVC)
+        productListVC.navigationController?.isNavigationBarHidden = true
+        self.window?.rootViewController = navProductVC
+        self.window?.makeKeyAndVisible()
+    }
+}

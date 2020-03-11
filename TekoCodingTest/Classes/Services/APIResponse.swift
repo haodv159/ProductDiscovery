@@ -32,7 +32,7 @@ struct APIResponse {
     
     var isSuccess: Bool = false
     var message: String = ""
-    var data = [[String: Any]]()
+    var result = [String: Any]()
     var extra = [String: Any]()
     
     static var errorAlertResponse = PublishSubject<Bool>()
@@ -48,9 +48,8 @@ struct APIResponse {
                 self.isSuccess = code == "SUCCESS"
             }
             
-            if let dict = value["result"] as? [String: Any],
-                let data = dict["products"] as? [[String: Any]] {
-                self.data = data
+            if let result = value["result"] as? [String: Any] {
+                self.result = result
             }
             
             if let extra = value["extra"] as? [String: Any] {

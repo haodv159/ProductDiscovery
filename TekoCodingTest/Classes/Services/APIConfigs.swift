@@ -14,6 +14,6 @@ struct Address {
     
     struct Product {
         static let list     = "api/search"
-        static let detail   = "api/products"
+        static let detail   = "api/products/%d"
     }
 }

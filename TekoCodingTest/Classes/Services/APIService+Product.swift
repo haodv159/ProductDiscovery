@@ -14,7 +14,7 @@ class ProductRouter: BaseRequest {
     
     enum EndPoint {
         case list([String: Any])
-        case detail([String: Any])
+        case detail(String, [String: Any])
     }
     
     var endPoint: EndPoint
@@ -35,8 +35,8 @@ class ProductRouter: BaseRequest {
     override var parameters: [String: Any]? {
         switch endPoint {
         case .list(let param):
-            return param
-        case .detail(let param):
+            return param 
+        case .detail(_, let param):
             return param
         }
     }
@@ -45,8 +45,8 @@ class ProductRouter: BaseRequest {
         switch endPoint {
         case .list:
             return Address.Product.list
-        case .detail:
-            return Address.Product.detail
+        case .detail(let id, _):
+            return String(format: Address.Product.detail, Int(id) ?? 0)
         }
     }
     
@@ -65,6 +65,10 @@ extension APIService {
     
     static func getList(_ param: [String: Any]) -> Observable<APIResponse> {
         return request(ProductRouter(endPoint: .list(param)))
+    }
+    
+    static func getDetail(_ id: String, _ param: [String: Any]) -> Observable<APIResponse> {
+        return request(ProductRouter(endPoint: .detail(id, param)))
     }
 }
 

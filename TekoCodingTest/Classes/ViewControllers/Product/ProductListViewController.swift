@@ -63,10 +63,19 @@ class ProductListViewController: BaseViewController {
             cell.bindData(data)
         }.disposed(by: disposeBag)
         
-        collectionView.rx.itemSelected.bind { indexPath in
+        collectionView.rx.modelSelected(Product.self).bind { [weak self] data in
+            guard let weakSelf = self else { return }
+            weakSelf.showProductDetailScreen(data.sku ?? "")
         }.disposed(by: disposeBag)
     }
 
+    // MARK: - Navigation
+    
+    private func showProductDetailScreen(_ productId: String) {
+        let productDetailVC = self.instantiateViewController(fromStoryboard: .product, ofType: ProductDetailViewController.self)
+        productDetailVC.viewModel.productId = productId
+        navigationController?.pushViewController(productDetailVC, animated: true)
+    }
 }
 
 extension ProductListViewController: UICollectionViewDelegateFlowLayout {
