@@ -17,6 +17,7 @@ class Product {
     var promotionPrices: [PromotionPrices]?
     var images: [Image]?
     var status: Status?
+    var attributeGroups: [AttributeGroups]?
     
     init() {
         
@@ -30,6 +31,7 @@ class Product {
         price = Price(json["price"])
         promotionPrices = json["promotionPrices"].arrayValue.map({ PromotionPrices($0) })
         status = Status(json["status"])
+        attributeGroups = json["attributeGroups"].arrayValue.map({ AttributeGroups($0) })
     }
 }
 
@@ -95,6 +97,9 @@ struct Image {
     var priority: Int?
     var path: String?
     
+    init() {
+    }
+    
     init(url: String?, priority: Int?, path: String?) {
         self.url = url
         self.priority = priority
@@ -105,6 +110,24 @@ struct Image {
         url = json["url"].stringValue
         priority = json["priority"].intValue
         path = json["path"].stringValue
+    }
+}
+
+struct AttributeGroups {
+    var name: String?
+    var value: String?
+    
+    init() {
+    }
+    
+    init(name: String?, value: String?) {
+        self.name = name
+        self.value = value
+    }
+    
+    init(_ json: JSON) {
+        name = json["name"].stringValue
+        value = json["value"].stringValue
     }
 }
 
