@@ -57,6 +57,7 @@
 		83C3CEF0241A40E500C2FF41 /* ProductInfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83C3CEEF241A40E500C2FF41 /* ProductInfoCell.swift */; };
 		EE558DEA241949130027D590 /* ProductDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE558DE9241949130027D590 /* ProductDetailViewController.swift */; };
 		EE558DEC241949470027D590 /* ProductDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE558DEB241949470027D590 /* ProductDetailViewModel.swift */; };
+		EEC6DD30241BC7AF001C0820 /* Double+.swift in Sources */ = {isa = PBXBuildFile; fileRef = EEC6DD2F241BC7AF001C0820 /* Double+.swift */; };
 		EEF8F1972417E5C000F8AB04 /* SF-Pro-Text-Heavy.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEF8F18B2417E5C000F8AB04 /* SF-Pro-Text-Heavy.otf */; };
 		EEF8F1982417E5C000F8AB04 /* SF-Pro-Text-MediumItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEF8F18C2417E5C000F8AB04 /* SF-Pro-Text-MediumItalic.otf */; };
 		EEF8F1992417E5C000F8AB04 /* SF-Pro-Text-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = EEF8F18D2417E5C000F8AB04 /* SF-Pro-Text-Light.otf */; };
@@ -168,6 +169,7 @@
 		D8539BA454E211DBF1D5CCC1 /* Pods-TekoCodingTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTestTests.debug.xcconfig"; path = "Target Support Files/Pods-TekoCodingTestTests/Pods-TekoCodingTestTests.debug.xcconfig"; sourceTree = "<group>"; };
 		EE558DE9241949130027D590 /* ProductDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewController.swift; sourceTree = "<group>"; };
 		EE558DEB241949470027D590 /* ProductDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductDetailViewModel.swift; sourceTree = "<group>"; };
+		EEC6DD2F241BC7AF001C0820 /* Double+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Double+.swift"; sourceTree = "<group>"; };
 		EEF8F18B2417E5C000F8AB04 /* SF-Pro-Text-Heavy.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Heavy.otf"; sourceTree = "<group>"; };
 		EEF8F18C2417E5C000F8AB04 /* SF-Pro-Text-MediumItalic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-MediumItalic.otf"; sourceTree = "<group>"; };
 		EEF8F18D2417E5C000F8AB04 /* SF-Pro-Text-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "SF-Pro-Text-Light.otf"; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 		834609DA24162F8300B148E3 /* TekoCodingTestTests */ = {
 			isa = PBXGroup;
 			children = (
+				EEC6DD2E241BAEA6001C0820 /* Models */,
 				834609DB24162F8300B148E3 /* TekoCodingTestTests.swift */,
 				834609DD24162F8300B148E3 /* Info.plist */,
 			);
@@ -365,6 +368,7 @@
 				83452AD8241B44AE00D9AAE3 /* UIScrollView+RefreshControl.swift */,
 				83452ADA241B451600D9AAE3 /* UIScrollView+InfiniteScrolling.swift */,
 				83452ADC241B454B00D9AAE3 /* RxSwift+.swift */,
+				EEC6DD2F241BC7AF001C0820 /* Double+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -446,6 +450,13 @@
 				3AC99B2C9C5E2745CC964653 /* Pods_TekoCodingTestTests.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		EEC6DD2E241BAEA6001C0820 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EEF8F1892417E5C000F8AB04 /* Resources */ = {
@@ -745,6 +756,7 @@
 				83892E872418D68300C7477B /* Int+.swift in Sources */,
 				83460A0824163D0000B148E3 /* APIService+Product.swift in Sources */,
 				8367A03E241750FA00B24EA9 /* ProductListCell.swift in Sources */,
+				EEC6DD30241BC7AF001C0820 /* Double+.swift in Sources */,
 				83460A002416396100B148E3 /* UIViewController+.swift in Sources */,
 				83460A0E2416409A00B148E3 /* APIService.swift in Sources */,
 				83452AE7241B827100D9AAE3 /* ProductCell.swift in Sources */,

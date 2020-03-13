@@ -60,32 +60,32 @@ struct Seller {
 }
 
 struct Price {
-    var supplierSalePrice: Int?
-    var sellPrice: Int?
+    var supplierSalePrice: Double?
+    var sellPrice: Double?
     
-    init(sellPrice: Int?, supplierSalePrice: Int?) {
+    init(sellPrice: Double?, supplierSalePrice: Double?) {
         self.sellPrice = sellPrice
         self.supplierSalePrice = supplierSalePrice
     }
     
     init(_ json: JSON) {
-        sellPrice = json["sellPrice"].intValue
-        supplierSalePrice = json["supplierSalePrice"].intValue
+        sellPrice = json["sellPrice"].doubleValue
+        supplierSalePrice = json["supplierSalePrice"].doubleValue
     }
 }
 
 struct PromotionPrices {
-    var finalPrice: Int?
-    var bestPrice: Int?
+    var finalPrice: Double?
+    var bestPrice: Double?
     
-    init(finalPrice: Int?, bestPrice: Int?) {
+    init(finalPrice: Double?, bestPrice: Double?) {
         self.finalPrice = finalPrice
         self.bestPrice = bestPrice
     }
     
     init(_ json: JSON) {
-        finalPrice = json["finalPrice"].intValue
-        bestPrice = json["bestPrice"].intValue
+        finalPrice = json["finalPrice"].doubleValue
+        bestPrice = json["bestPrice"].doubleValue
     }
 }
 

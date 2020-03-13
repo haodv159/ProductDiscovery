@@ -18,9 +18,9 @@ class ProductDetailViewModel: BaseViewModel {
     var products = BehaviorRelay<[Product]>(value: [Product]())
     
     var productIdNew = PublishSubject<String>()
-    var currentPrice = 0
+    var currentPrice = Double(0)
     var productsCount = 0
-    var totalPrice = 0
+    var totalPrice = Double(0)
     var totalProductsInCart = 0
     
     override init() {

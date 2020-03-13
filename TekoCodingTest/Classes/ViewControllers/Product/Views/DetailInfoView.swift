@@ -46,6 +46,8 @@ class DetailInfoView: UIView {
     
     var product = BehaviorRelay<Product>(value: Product())
     
+    var heightViewMax = BehaviorRelay<CGFloat>(value: CGFloat(265))
+    
     private lazy var pagingViewController: PagingViewController<PagingIndexItem> = {
         let controller = PagingViewController<PagingIndexItem>()
         controller.font = UIFont.regularDesignFont(ofSize: 13)
@@ -103,18 +105,26 @@ class DetailInfoView: UIView {
             guard let weakSelf = self else { return }
             weakSelf.updateUI()
         }).disposed(by: disposeBag)
+        
+        
+        heightViewMax.subscribe(onNext: { [weak self] value in
+            guard let weakSelf = self else { return }
+            weakSelf.updateUI()
+        }).disposed(by: disposeBag)
     }
     
     private func updateUI() {
         expandImageView.image = isExpandView.value ? #imageLiteral(resourceName: "chevronUp") : #imageLiteral(resourceName: "chevronDown")
+        expandImageView.isHidden = heightViewMax.value <= DetailInfoView.height
+        
         expandLabel.text = isExpandView.value ? "Hiển thị ít hơn" : "Hiển thị nhiều hơn"
+        expandLabel.isHidden = heightViewMax.value <= DetailInfoView.height
     }
     
     // MARK : - Actions
     
     @IBAction func onExpandViewButton(_ sender: Any) {
         isExpandView.accept(!isExpandView.value)
-        updateUI()
     }
 }
 
@@ -128,6 +138,7 @@ extension DetailInfoView: PagingViewControllerDataSource {
     
     func pagingViewController<T>(_ pagingViewController: PagingViewController<T>, viewControllerForIndex index: Int) -> UIViewController {
         let vc = UIViewController().topController().instantiateViewController(fromStoryboard: .product, ofType: ProductInfoViewController.self)
+        vc.heightView.bind(to: heightViewMax).disposed(by: disposeBag)
         vc.viewModel.attributeGroups.accept(product.value.attributeGroups ?? [AttributeGroups]())
         return vc
     }

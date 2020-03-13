@@ -79,7 +79,8 @@ class ProductDetailViewController: BaseViewController {
         
         detailInfoView.isExpandView.asObservable().subscribe(onNext: { [weak self] status in
             guard let weakSelf = self else { return }
-            weakSelf.detailInfoHeightConstraint.constant = status ? CGFloat(500) : DetailInfoView.height
+            let heightMax = weakSelf.detailInfoView.heightViewMax.value > DetailInfoView.height ? weakSelf.detailInfoView.heightViewMax.value : DetailInfoView.height
+            weakSelf.detailInfoHeightConstraint.constant = status ? heightMax : DetailInfoView.height
             weakSelf.updateUI()
         }).disposed(by: disposeBag)
         
@@ -91,6 +92,13 @@ class ProductDetailViewController: BaseViewController {
         
         viewModel.products.bind(to: self.productsView.products).disposed(by: disposeBag)
         productsView.productIdNew.bind(to: viewModel.productIdNew).disposed(by: disposeBag)
+        
+        detailInfoView.heightViewMax.asObservable().subscribe(onNext: { [weak self] value in
+            guard let weakSelf = self else { return }
+            let heightMax = value > DetailInfoView.height ? value : DetailInfoView.height
+            weakSelf.detailInfoHeightConstraint.constant = weakSelf.detailInfoView.isExpandView.value ? heightMax : DetailInfoView.height
+            weakSelf.updateUI()
+        }).disposed(by: disposeBag)
     }
     
     private func setImageForSlide(_ product: Product) {
