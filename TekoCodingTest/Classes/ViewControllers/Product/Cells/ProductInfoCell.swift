@@ -19,7 +19,7 @@ class ProductInfoCell: UITableViewCell {
         super.awakeFromNib()
     }
     
-    func bindData(_ data: AttributeGroups, isEvenNumber: Bool) {
+    func bindData(_ data: AttributeGroups, _ isEvenNumber: Bool) {
         titleLabel.text = data.name
         valueLabel.text = data.value
         self.backgroundColor = isEvenNumber ? .paleGrey : .white

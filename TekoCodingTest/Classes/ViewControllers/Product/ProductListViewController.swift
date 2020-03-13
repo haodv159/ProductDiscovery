@@ -22,7 +22,12 @@ class ProductListViewController: BaseViewController {
         setupSearchBar()
         setupCollectionView()
         bindViewModel()
-        viewModel.getProductList("")
+        viewModel.reload(searchBar.text ?? "")
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        self.view.endEditing(true)
     }
     
     private func setupSearchBar() {
@@ -67,6 +72,22 @@ class ProductListViewController: BaseViewController {
             guard let weakSelf = self else { return }
             weakSelf.showProductDetailScreen(data.sku ?? "")
         }.disposed(by: disposeBag)
+        
+        collectionView.addPullToRefresh { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.viewModel.reload(weakSelf.searchBar.text ?? "")
+        }
+        
+        collectionView.addInfiniteScrollingView { [weak self] in
+            guard let weakSelf = self else { return }
+            weakSelf.viewModel.loadMore(weakSelf.searchBar.text ?? "")
+        }
+        
+        viewModel.products.asObservable().subscribe(onNext: { [weak self] _ in
+            guard let weakSelf = self else { return }
+            weakSelf.collectionView.stopPullToRefreshAnimating()
+            weakSelf.collectionView.infiniteScrollingView?.stopAnimating()
+        }).disposed(by: disposeBag)
     }
 
     // MARK: - Navigation

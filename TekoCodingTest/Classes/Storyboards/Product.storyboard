@@ -34,6 +34,18 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vR7-Ov-PbU" customClass="GradientView" customModule="TekoCodingTest" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="92"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                        <color key="value" red="0.87450980392156863" green="0.12549019607843137" blue="0.12549019607843137" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                        <color key="value" red="0.96078431372549022" green="0.27843137254901962" blue="0.11764705882352941" alpha="1" colorSpace="calibratedRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gdj-yW-fs1">
                                 <rect key="frame" x="0.0" y="44" width="414" height="48"/>
                                 <subviews>
@@ -111,11 +123,15 @@
                             <constraint firstItem="u0d-bt-2ml" firstAttribute="trailing" secondItem="Gdj-yW-fs1" secondAttribute="trailing" id="2Bd-Va-0FF"/>
                             <constraint firstItem="smV-Fx-7bH" firstAttribute="top" secondItem="Gdj-yW-fs1" secondAttribute="bottom" id="AYI-7i-dwQ"/>
                             <constraint firstItem="Gdj-yW-fs1" firstAttribute="top" secondItem="u0d-bt-2ml" secondAttribute="top" id="FF3-wb-y8T"/>
+                            <constraint firstItem="vR7-Ov-PbU" firstAttribute="leading" secondItem="u0d-bt-2ml" secondAttribute="leading" id="HO8-YJ-yHJ"/>
                             <constraint firstItem="hDP-ht-2yu" firstAttribute="bottom" secondItem="u0d-bt-2ml" secondAttribute="bottom" id="ThD-MR-M5g"/>
                             <constraint firstItem="u0d-bt-2ml" firstAttribute="trailing" secondItem="smV-Fx-7bH" secondAttribute="trailing" id="Tsm-PH-BVi"/>
                             <constraint firstItem="Gdj-yW-fs1" firstAttribute="leading" secondItem="u0d-bt-2ml" secondAttribute="leading" id="Wek-wy-935"/>
+                            <constraint firstItem="vR7-Ov-PbU" firstAttribute="top" secondItem="c6m-Dt-Tvo" secondAttribute="top" id="aBG-I9-BD1"/>
+                            <constraint firstItem="vR7-Ov-PbU" firstAttribute="bottom" secondItem="smV-Fx-7bH" secondAttribute="top" id="c0f-xL-mcI"/>
                             <constraint firstAttribute="bottom" secondItem="smV-Fx-7bH" secondAttribute="bottom" id="ezQ-vK-zU6"/>
                             <constraint firstItem="smV-Fx-7bH" firstAttribute="leading" secondItem="u0d-bt-2ml" secondAttribute="leading" id="qnG-tt-63o"/>
+                            <constraint firstItem="u0d-bt-2ml" firstAttribute="trailing" secondItem="vR7-Ov-PbU" secondAttribute="trailing" id="rQM-PQ-cRL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="u0d-bt-2ml"/>
                     </view>
@@ -200,13 +216,23 @@
                                                     </userDefinedRuntimeAttribute>
                                                 </userDefinedRuntimeAttributes>
                                             </view>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbe-su-0ap">
+                                                <rect key="frame" x="8" y="4" width="32" height="32"/>
+                                                <connections>
+                                                    <action selector="onCartButton:" destination="bhH-xo-2V8" eventType="touchUpInside" id="Hch-ls-j9w"/>
+                                                </connections>
+                                            </button>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                         <constraints>
                                             <constraint firstItem="VSj-XL-Z0L" firstAttribute="leading" secondItem="4NF-yc-CKK" secondAttribute="trailing" constant="-8" id="48Q-N1-qmQ"/>
+                                            <constraint firstItem="cbe-su-0ap" firstAttribute="bottom" secondItem="4NF-yc-CKK" secondAttribute="bottom" id="55R-pg-C01"/>
+                                            <constraint firstItem="cbe-su-0ap" firstAttribute="leading" secondItem="4NF-yc-CKK" secondAttribute="leading" id="5kh-4y-CEU"/>
                                             <constraint firstItem="VSj-XL-Z0L" firstAttribute="top" secondItem="4NF-yc-CKK" secondAttribute="top" constant="-8" id="Ayz-LJ-RQs"/>
                                             <constraint firstAttribute="trailing" secondItem="4NF-yc-CKK" secondAttribute="trailing" constant="16" id="WMx-O3-APJ"/>
                                             <constraint firstItem="4NF-yc-CKK" firstAttribute="centerY" secondItem="uGP-S6-e7d" secondAttribute="centerY" id="dce-wZ-Qfd"/>
+                                            <constraint firstItem="cbe-su-0ap" firstAttribute="trailing" secondItem="VSj-XL-Z0L" secondAttribute="trailing" id="mId-I4-02X"/>
+                                            <constraint firstItem="cbe-su-0ap" firstAttribute="top" secondItem="VSj-XL-Z0L" secondAttribute="top" id="nZM-gz-EIP"/>
                                             <constraint firstAttribute="width" secondItem="uGP-S6-e7d" secondAttribute="height" multiplier="1:1" id="vHb-V1-QVk"/>
                                         </constraints>
                                     </view>
@@ -242,7 +268,7 @@
                                         <rect key="frame" x="0.0" y="0.0" width="414" height="706"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Aso-OQ-am3" userLabel="ContentView">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="804"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="1000"/>
                                                 <subviews>
                                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6bf-tm-dLx" customClass="SlideView" customModule="TekoCodingTest" customModuleProvider="target">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="327"/>
@@ -265,11 +291,11 @@
                                                             <constraint firstAttribute="height" constant="128" id="P8v-o7-EFO"/>
                                                         </constraints>
                                                     </view>
-                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqI-aL-AA8">
-                                                        <rect key="frame" x="0.0" y="598" width="414" height="128"/>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZqI-aL-AA8" customClass="ProductsView" customModule="TekoCodingTest" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="598" width="414" height="282"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="128" id="q2h-37-eCV"/>
+                                                            <constraint firstAttribute="height" constant="282" id="q2h-37-eCV"/>
                                                         </constraints>
                                                     </view>
                                                 </subviews>
@@ -282,7 +308,7 @@
                                                     <constraint firstItem="6bf-tm-dLx" firstAttribute="top" secondItem="Aso-OQ-am3" secondAttribute="top" id="HuT-n7-i0u"/>
                                                     <constraint firstAttribute="trailing" secondItem="ZqI-aL-AA8" secondAttribute="trailing" id="Iry-ki-cZX"/>
                                                     <constraint firstItem="ZqI-aL-AA8" firstAttribute="leading" secondItem="Aso-OQ-am3" secondAttribute="leading" id="SaR-GZ-Uq4"/>
-                                                    <constraint firstAttribute="height" constant="804" id="Xcm-zP-JL5"/>
+                                                    <constraint firstAttribute="height" constant="1000" id="Xcm-zP-JL5"/>
                                                     <constraint firstAttribute="trailing" secondItem="6bf-tm-dLx" secondAttribute="trailing" id="YqV-JK-Tye"/>
                                                     <constraint firstItem="i81-7m-4gh" firstAttribute="leading" secondItem="Aso-OQ-am3" secondAttribute="leading" id="ZRm-d5-gLc"/>
                                                     <constraint firstItem="ZqI-aL-AA8" firstAttribute="top" secondItem="BE4-JC-nNQ" secondAttribute="bottom" constant="8" id="ccp-pF-Nd7"/>
@@ -316,7 +342,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="g4p-fh-R2P">
                                 <rect key="frame" x="0.0" y="798" width="414" height="64"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIh-jc-C3b">
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lIh-jc-C3b" customClass="GradientView" customModule="TekoCodingTest" customModuleProvider="target">
                                         <rect key="frame" x="136" y="8" width="270" height="48"/>
                                         <subviews>
                                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="addToCart" translatesAutoresizingMaskIntoConstraints="NO" id="FqI-0b-b6s">
@@ -346,14 +372,29 @@
                                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                                 <real key="value" value="8"/>
                                             </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="bottomColor">
+                                                <color key="value" red="0.96078431369999995" green="0.2784313725" blue="0.1176470588" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="topColor">
+                                                <color key="value" red="0.87450980389999999" green="0.12549019610000001" blue="0.12549019610000001" alpha="1" colorSpace="calibratedRGB"/>
+                                            </userDefinedRuntimeAttribute>
                                         </userDefinedRuntimeAttributes>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="maa-gf-hpO">
+                                        <rect key="frame" x="136" y="8" width="270" height="48"/>
+                                        <connections>
+                                            <action selector="onAddCartButton:" destination="bhH-xo-2V8" eventType="touchUpInside" id="MtP-Pf-6Kn"/>
+                                        </connections>
+                                    </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="iSO-6j-1b9">
                                         <rect key="frame" x="8" y="8" width="120" height="48"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dib-TJ-4hK">
                                                 <rect key="frame" x="0.0" y="0.0" width="40" height="48"/>
                                                 <state key="normal" image="removeCircle"/>
+                                                <connections>
+                                                    <action selector="onRemoveProductButton:" destination="bhH-xo-2V8" eventType="touchUpInside" id="ELz-Cp-OLE"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GtX-dm-Q49">
                                                 <rect key="frame" x="40" y="0.0" width="40" height="48"/>
@@ -364,6 +405,9 @@
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B1w-Et-aN4">
                                                 <rect key="frame" x="80" y="0.0" width="40" height="48"/>
                                                 <state key="normal" image="addCircle"/>
+                                                <connections>
+                                                    <action selector="onAddProductButton:" destination="bhH-xo-2V8" eventType="touchUpInside" id="oc5-4q-HyW"/>
+                                                </connections>
                                             </button>
                                         </subviews>
                                         <constraints>
@@ -374,10 +418,14 @@
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="64" id="16b-jY-nb7"/>
+                                    <constraint firstItem="maa-gf-hpO" firstAttribute="top" secondItem="lIh-jc-C3b" secondAttribute="top" id="833-wB-bVl"/>
+                                    <constraint firstItem="maa-gf-hpO" firstAttribute="leading" secondItem="lIh-jc-C3b" secondAttribute="leading" id="H3N-Ei-UxH"/>
                                     <constraint firstItem="lIh-jc-C3b" firstAttribute="centerY" secondItem="g4p-fh-R2P" secondAttribute="centerY" id="LE3-QS-SJv"/>
                                     <constraint firstItem="iSO-6j-1b9" firstAttribute="leading" secondItem="g4p-fh-R2P" secondAttribute="leading" constant="8" id="RGu-Bn-SVr"/>
+                                    <constraint firstItem="maa-gf-hpO" firstAttribute="bottom" secondItem="lIh-jc-C3b" secondAttribute="bottom" id="YlA-EX-jlf"/>
                                     <constraint firstItem="iSO-6j-1b9" firstAttribute="centerY" secondItem="g4p-fh-R2P" secondAttribute="centerY" id="Zyh-nS-x2y"/>
                                     <constraint firstItem="lIh-jc-C3b" firstAttribute="top" secondItem="g4p-fh-R2P" secondAttribute="top" constant="8" id="hKX-Ki-GkW"/>
+                                    <constraint firstItem="maa-gf-hpO" firstAttribute="trailing" secondItem="lIh-jc-C3b" secondAttribute="trailing" id="kZK-fl-Z8j"/>
                                     <constraint firstItem="lIh-jc-C3b" firstAttribute="leading" secondItem="iSO-6j-1b9" secondAttribute="trailing" constant="8" id="kyg-21-QUc"/>
                                     <constraint firstAttribute="trailing" secondItem="lIh-jc-C3b" secondAttribute="trailing" constant="8" id="qVr-zf-VmJ"/>
                                     <constraint firstItem="iSO-6j-1b9" firstAttribute="top" secondItem="g4p-fh-R2P" secondAttribute="top" constant="8" id="xaV-xD-5Zo"/>
@@ -406,7 +454,12 @@
                         <outlet property="detailInfoView" destination="BE4-JC-nNQ" id="HYB-N6-LS3"/>
                         <outlet property="nameNavLabel" destination="jAR-hF-RVz" id="w0F-i0-Xwm"/>
                         <outlet property="priceNavLabel" destination="89o-Tt-rla" id="gAL-te-JjE"/>
+                        <outlet property="productsChoosedLabel" destination="GtX-dm-Q49" id="OQr-ok-sF0"/>
+                        <outlet property="productsView" destination="ZqI-aL-AA8" id="U7j-HN-erU"/>
+                        <outlet property="scrollView" destination="Zzd-kl-oc2" id="Xvh-DJ-Kbz"/>
                         <outlet property="slideView" destination="6bf-tm-dLx" id="ZtM-uG-XgX"/>
+                        <outlet property="totalPriceLabel" destination="rBH-8L-gro" id="9Rg-sC-Jg7"/>
+                        <outlet property="totalProductInCartLabel" destination="8o6-sv-11R" id="0K5-AU-YDk"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LbD-tn-Ujk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

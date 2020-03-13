@@ -14,13 +14,39 @@ import SwiftyJSON
 class ProductListViewModel: BaseViewModel {
     
     var page = 1
+    var currentProducts = [Product]()
     var products = BehaviorRelay<[Product]>(value: [Product]())
+    
+    private var searchString = ""
     
     override init() {
         super.init()
     }
     
+    private func resetData() {
+        currentProducts = [Product]()
+        page = 1
+    }
+    
+    func reload(_ searchText: String ) {
+        resetData()
+        getProductList(searchText)
+    }
+    
+    func loadMore(_ searchText: String) {
+        page += 1
+        getProductList(searchText)
+    }
+    
+    private func handleDataBeforeUpdate(_ searchText: String) {
+        if searchString != searchText {
+            resetData()
+            searchString = searchText
+        }
+    }
+    
     func getProductList(_ searchText: String) {
+        self.handleDataBeforeUpdate(searchText)
         let params = ["q": "\(searchText)",
             "terminal": "CP01",
             "visitorId": "",
@@ -38,7 +64,8 @@ class ProductListViewModel: BaseViewModel {
     private func handleSuccess(_ response: [String: Any]) {
         if let data = response["products"] as? [[String: Any]] {
             let listProduct = data.map({ Product(JSON($0)) })//.filter({ $0.status?.isPublish == true })
-            products.accept(listProduct)
+            currentProducts += listProduct
+            products.accept(currentProducts)
         }
     }
 }

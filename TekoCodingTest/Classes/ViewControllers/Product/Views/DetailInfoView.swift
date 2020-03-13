@@ -36,9 +36,13 @@ enum ProductInfo: Int {
 class DetailInfoView: UIView {
 
     @IBOutlet var contentView: UIView!
+    @IBOutlet weak var expandLabel: UILabel!
+    @IBOutlet weak var expandImageView: UIImageView!
     
-    static let height = CGFloat(238)
+    static let height = CGFloat(265)
     private var disposeBag = DisposeBag()
+    
+    var isExpandView = BehaviorRelay<Bool>(value: false)
     
     var product = BehaviorRelay<Product>(value: Product())
     
@@ -76,12 +80,17 @@ class DetailInfoView: UIView {
         self.bindViewModel()
     }
     
+    // MARK: - ConfigsUI
+    
     private func setupViews() {
         self.addSubview(pagingViewController.view)
         
         pagingViewController.view.snp.makeConstraints { (maker) in
-            maker.edges.equalToSuperview()
+            maker.top.leading.trailing.equalToSuperview()
+            maker.bottom.equalToSuperview().inset(42)
         }
+        
+        updateUI()
     }
     
     private func bindViewModel() {
@@ -89,6 +98,23 @@ class DetailInfoView: UIView {
             guard let weakSelf = self else { return }
             weakSelf.pagingViewController.reloadData()
         }).disposed(by: disposeBag)
+        
+        isExpandView.subscribe(onNext: { [weak self] status in
+            guard let weakSelf = self else { return }
+            weakSelf.updateUI()
+        }).disposed(by: disposeBag)
+    }
+    
+    private func updateUI() {
+        expandImageView.image = isExpandView.value ? #imageLiteral(resourceName: "chevronUp") : #imageLiteral(resourceName: "chevronDown")
+        expandLabel.text = isExpandView.value ? "Hiển thị ít hơn" : "Hiển thị nhiều hơn"
+    }
+    
+    // MARK : - Actions
+    
+    @IBAction func onExpandViewButton(_ sender: Any) {
+        isExpandView.accept(!isExpandView.value)
+        updateUI()
     }
 }
 

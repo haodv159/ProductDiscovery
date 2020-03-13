@@ -1,8 +1,8 @@
 //
-//  ProductListCell.swift
+//  ProductCell.swift
 //  TekoCodingTest
 //
-//  Created by Hao Dam on 3/10/20.
+//  Created by Hao Dam on 3/13/20.
 //  Copyright © 2020 Hao Dam. All rights reserved.
 //
 
@@ -10,7 +10,7 @@ import UIKit
 import RxSwift
 import SDWebImage
 
-class ProductListCell: UICollectionViewCell {
+class ProductCell: UICollectionViewCell {
     
     @IBOutlet weak var avatarImageView: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
@@ -21,8 +21,9 @@ class ProductListCell: UICollectionViewCell {
     
     private let disposeBag = DisposeBag()
     
-    static let heightCell = CGFloat(104)
-    static let identifier = "ProductListCell"
+    static let heightCell = CGFloat(236)
+    static let widthCell = CGFloat(150)
+    static let identifier = "ProductCell"
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -38,7 +39,7 @@ class ProductListCell: UICollectionViewCell {
         let sellPrice = data.price?.sellPrice ?? 0
         let promotionPrices = data.price?.supplierSalePrice ?? 0
         let discount = data.discount
-
+        
         let oldPrice = discount > 0 ? sellPrice.formattedWithDots : ""
         setAttributeForOldPrice(oldPrice)
         

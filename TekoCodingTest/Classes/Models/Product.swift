@@ -33,6 +33,18 @@ class Product {
         status = Status(json["status"])
         attributeGroups = json["attributeGroups"].arrayValue.map({ AttributeGroups($0) })
     }
+    
+    var discount: Int {
+        let sellPrice = price?.sellPrice ?? 0
+        let promotionPrices = price?.supplierSalePrice ?? 0
+
+        var discount = 0
+        if sellPrice > 0, promotionPrices < sellPrice  {
+            let price = Float(promotionPrices)/Float(sellPrice)
+            discount = Int((1 - Float(round(100*price)/100)) * 100)
+        }
+        return discount
+    }
 }
 
 struct Seller {

@@ -8,6 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		7304BD960CFF0AF2E769375C /* Pods_TekoCodingTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3AC99B2C9C5E2745CC964653 /* Pods_TekoCodingTestTests.framework */; };
+		83452AD9241B44AE00D9AAE3 /* UIScrollView+RefreshControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83452AD8241B44AE00D9AAE3 /* UIScrollView+RefreshControl.swift */; };
+		83452ADB241B451600D9AAE3 /* UIScrollView+InfiniteScrolling.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83452ADA241B451600D9AAE3 /* UIScrollView+InfiniteScrolling.swift */; };
+		83452ADD241B454B00D9AAE3 /* RxSwift+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83452ADC241B454B00D9AAE3 /* RxSwift+.swift */; };
+		83452ADF241B7A1000D9AAE3 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83452ADE241B7A0F00D9AAE3 /* GradientView.swift */; };
+		83452AE1241B7FFE00D9AAE3 /* ProductsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83452AE0241B7FFE00D9AAE3 /* ProductsView.swift */; };
+		83452AE5241B81A800D9AAE3 /* ProductsView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83452AE4241B81A800D9AAE3 /* ProductsView.xib */; };
+		83452AE7241B827100D9AAE3 /* ProductCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 83452AE6241B827100D9AAE3 /* ProductCell.swift */; };
+		83452AE9241B828200D9AAE3 /* ProductCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 83452AE8241B828200D9AAE3 /* ProductCell.xib */; };
 		834609C524162F7C00B148E3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 834609C424162F7C00B148E3 /* AppDelegate.swift */; };
 		834609CE24162F8200B148E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 834609CD24162F8200B148E3 /* Assets.xcassets */; };
 		834609D124162F8200B148E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 834609CF24162F8200B148E3 /* LaunchScreen.storyboard */; };
@@ -103,6 +111,14 @@
 		44380F0314ABB118E7059B97 /* Pods-TekoCodingTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTest.release.xcconfig"; path = "Target Support Files/Pods-TekoCodingTest/Pods-TekoCodingTest.release.xcconfig"; sourceTree = "<group>"; };
 		5481F151A69E3013145102B4 /* Pods_TekoCodingTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TekoCodingTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5BFB886F36DB83C11F30C971 /* Pods-TekoCodingTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TekoCodingTestTests.release.xcconfig"; path = "Target Support Files/Pods-TekoCodingTestTests/Pods-TekoCodingTestTests.release.xcconfig"; sourceTree = "<group>"; };
+		83452AD8241B44AE00D9AAE3 /* UIScrollView+RefreshControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+RefreshControl.swift"; sourceTree = "<group>"; };
+		83452ADA241B451600D9AAE3 /* UIScrollView+InfiniteScrolling.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIScrollView+InfiniteScrolling.swift"; sourceTree = "<group>"; };
+		83452ADC241B454B00D9AAE3 /* RxSwift+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "RxSwift+.swift"; sourceTree = "<group>"; };
+		83452ADE241B7A0F00D9AAE3 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		83452AE0241B7FFE00D9AAE3 /* ProductsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductsView.swift; sourceTree = "<group>"; };
+		83452AE4241B81A800D9AAE3 /* ProductsView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductsView.xib; sourceTree = "<group>"; };
+		83452AE6241B827100D9AAE3 /* ProductCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProductCell.swift; sourceTree = "<group>"; };
+		83452AE8241B828200D9AAE3 /* ProductCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProductCell.xib; sourceTree = "<group>"; };
 		834609C124162F7C00B148E3 /* TekoCodingTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TekoCodingTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		834609C424162F7C00B148E3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		834609CD24162F8200B148E3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -297,6 +313,7 @@
 			children = (
 				834609FC2416391000B148E3 /* Extensions */,
 				83460A11241641BC00B148E3 /* LoadingIndicator.swift */,
+				83452ADE241B7A0F00D9AAE3 /* GradientView.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -345,6 +362,9 @@
 				83892E862418D68300C7477B /* Int+.swift */,
 				83892E882418F38000C7477B /* UIColor+.swift */,
 				83C3CEE9241A368900C2FF41 /* UIFont+.swift */,
+				83452AD8241B44AE00D9AAE3 /* UIScrollView+RefreshControl.swift */,
+				83452ADA241B451600D9AAE3 /* UIScrollView+InfiniteScrolling.swift */,
+				83452ADC241B454B00D9AAE3 /* RxSwift+.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -395,6 +415,8 @@
 				83C3CEDD2419F5E400C2FF41 /* ImageSlideCell.swift */,
 				83C3CEDF2419F5F000C2FF41 /* ImageSlideCell.xib */,
 				83C3CEEF241A40E500C2FF41 /* ProductInfoCell.swift */,
+				83452AE6241B827100D9AAE3 /* ProductCell.swift */,
+				83452AE8241B828200D9AAE3 /* ProductCell.xib */,
 			);
 			path = Cells;
 			sourceTree = "<group>";
@@ -408,6 +430,8 @@
 				83C3CEE3241A19CE00C2FF41 /* BasicInfoView.xib */,
 				83C3CEE5241A2CCD00C2FF41 /* DetailInfoView.swift */,
 				83C3CEE7241A2DD900C2FF41 /* DetailInfoView.xib */,
+				83452AE0241B7FFE00D9AAE3 /* ProductsView.swift */,
+				83452AE4241B81A800D9AAE3 /* ProductsView.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -575,9 +599,11 @@
 				83C3CED82419DD1200C2FF41 /* SlideView.xib in Resources */,
 				83C3CEE4241A19CE00C2FF41 /* BasicInfoView.xib in Resources */,
 				EEF8F1992417E5C000F8AB04 /* SF-Pro-Text-Light.otf in Resources */,
+				83452AE5241B81A800D9AAE3 /* ProductsView.xib in Resources */,
 				EEF8F1A12417E5C000F8AB04 /* SF-Pro-Text-Medium.otf in Resources */,
 				EEF8F19F2417E5C000F8AB04 /* SF-Pro-Text-HeavyItalic.otf in Resources */,
 				EEF8F19A2417E5C000F8AB04 /* SF-Pro-Text-Regular.otf in Resources */,
+				83452AE9241B828200D9AAE3 /* ProductCell.xib in Resources */,
 				83460A14241647D600B148E3 /* Product.storyboard in Resources */,
 				EEF8F19C2417E5C000F8AB04 /* SF-Pro-Text-BoldItalic.otf in Resources */,
 				EEF8F19B2417E5C000F8AB04 /* SF-Pro-Text-Bold.otf in Resources */,
@@ -711,14 +737,19 @@
 			files = (
 				83C3CEEC241A3D6A00C2FF41 /* ProductInfoViewController.swift in Sources */,
 				83892E852418BAEB00C7477B /* Product.swift in Sources */,
+				83452ADF241B7A1000D9AAE3 /* GradientView.swift in Sources */,
 				83C3CEF0241A40E500C2FF41 /* ProductInfoCell.swift in Sources */,
+				83452AE1241B7FFE00D9AAE3 /* ProductsView.swift in Sources */,
+				83452AD9241B44AE00D9AAE3 /* UIScrollView+RefreshControl.swift in Sources */,
 				834609FE2416394600B148E3 /* UIStoryboard+.swift in Sources */,
 				83892E872418D68300C7477B /* Int+.swift in Sources */,
 				83460A0824163D0000B148E3 /* APIService+Product.swift in Sources */,
 				8367A03E241750FA00B24EA9 /* ProductListCell.swift in Sources */,
 				83460A002416396100B148E3 /* UIViewController+.swift in Sources */,
 				83460A0E2416409A00B148E3 /* APIService.swift in Sources */,
+				83452AE7241B827100D9AAE3 /* ProductCell.swift in Sources */,
 				EE558DEA241949130027D590 /* ProductDetailViewController.swift in Sources */,
+				83452ADD241B454B00D9AAE3 /* RxSwift+.swift in Sources */,
 				83679FF22417374100B24EA9 /* BaseViewController.swift in Sources */,
 				83679FF824173ABF00B24EA9 /* ProductListViewController.swift in Sources */,
 				83C3CEEE241A3FAE00C2FF41 /* ProductInfoViewModel.swift in Sources */,
@@ -726,6 +757,7 @@
 				83460A102416410900B148E3 /* APIResponse.swift in Sources */,
 				834609C524162F7C00B148E3 /* AppDelegate.swift in Sources */,
 				83C3CED62419DCFE00C2FF41 /* SlideView.swift in Sources */,
+				83452ADB241B451600D9AAE3 /* UIScrollView+InfiniteScrolling.swift in Sources */,
 				83460A0224163A5600B148E3 /* UIView+.swift in Sources */,
 				83C3CEE2241A19C300C2FF41 /* BasicInfoView.swift in Sources */,
 				83679FF4241737CC00B24EA9 /* BaseViewModel.swift in Sources */,

@@ -63,12 +63,7 @@ class BasicInfoView: UIView {
     private func updatePrice(_ data: Product) {
         let sellPrice = data.price?.sellPrice ?? 0
         let promotionPrices = data.price?.supplierSalePrice ?? 0
-
-        var discount = 0
-        if sellPrice > 0, promotionPrices < sellPrice  {
-            let price = Float(promotionPrices)/Float(sellPrice)
-            discount = Int((1 - Float(round(100*price)/100)) * 100)
-        }
+        let discount = data.discount
         
         let oldPrice = discount > 0 ? sellPrice.formattedWithDots : ""
         setAttributeForOldPrice(oldPrice)

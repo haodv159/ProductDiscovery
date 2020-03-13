@@ -24,7 +24,8 @@ class ProductInfoViewController: BaseViewController {
     
     private func setupTableView() {
         tableView.contentInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        tableView.separatorColor = .clear
+        tableView.separatorStyle = .none
+        tableView.allowsSelection = false
         tableView.rowHeight = UITableView.automaticDimension
         tableView.contentInsetAdjustmentBehavior = .never
         tableView.isScrollEnabled = false
@@ -33,8 +34,9 @@ class ProductInfoViewController: BaseViewController {
     private func bindViewModel() {
         tableView.rx.setDelegate(self).disposed(by: disposeBag)
         
-        viewModel.attributeGroups.bind(to: tableView.rx.items(cellIdentifier: ProductInfoCell.identifier, cellType: ProductInfoCell.self)) { _, data, cell in
-            cell.bindData(data, isEvenNumber: true)
+        viewModel.attributeGroups.bind(to: tableView.rx.items(cellIdentifier: ProductInfoCell.identifier, cellType: ProductInfoCell.self)) { index, data, cell in
+            let isEvenNumber = index % 2 == 0
+            cell.bindData(data, isEvenNumber)
         }.disposed(by: disposeBag)
     }
 }
