@@ -274,7 +274,6 @@
 		834609DA24162F8300B148E3 /* ProductDiscoveryTests */ = {
 			isa = PBXGroup;
 			children = (
-				EEC6DD2E241BAEA6001C0820 /* Models */,
 				834609DB24162F8300B148E3 /* ProductDiscoveryTests.swift */,
 				834609DD24162F8300B148E3 /* Info.plist */,
 			);
@@ -464,13 +463,6 @@
 				1A21226987C9D16E7D08EFF3 /* Pods_ProductDiscoveryTests.framework */,
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		EEC6DD2E241BAEA6001C0820 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		EEC6DD32241BD885001C0820 /* Recovered References */ = {
