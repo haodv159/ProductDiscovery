@@ -1,7 +1,7 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'TekoCodingTest' do
+target 'ProductDiscovery' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
   pod 'Alamofire', '~> 4.7'
@@ -15,14 +15,14 @@ target 'TekoCodingTest' do
   pod 'SnapKit', '~> 5.0.0'
   pod 'Parchment', '1.7.0'
 
-  # Pods for TekoCodingTest
+  # Pods for ProductDiscovery
 
-  target 'TekoCodingTestTests' do
+  target 'ProductDiscoveryTests' do
     inherit! :search_paths
     # Pods for testing
   end
 
-  target 'TekoCodingTestUITests' do
+  target 'ProductDiscoveryUITests' do
     # Pods for testing
   end
 
